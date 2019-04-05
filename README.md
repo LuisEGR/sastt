@@ -10,7 +10,7 @@ Este proyecto levanta el sitio completo, que está conformado por un contenedor 
 Web: `http://localhost:8080`    
 API: `http://localhost:3000`   
 
-El servidor de MongoDB solo es accesible desde el contenedor **sasstServerApi**, mediante la URL localhost:27017/< colección >
+El servidor de MongoDB solo es accesible desde el contenedor **sasstServerApi**, mediante la URL localhost/< colección >
 
 
 ## Requerimientos:

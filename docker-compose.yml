@@ -1,13 +1,5 @@
 version: "3"
 services:
-  api:
-    container_name: sasstServerApi
-    restart: always
-    build: ./server
-    ports:
-      - "3000:3000"
-    links:
-      - mongo
 
   mongo:
     container_name: sasstMongo
@@ -16,6 +8,18 @@ services:
       - ./data:/data/db
     ports:
       - "27017:27017"
+
+  api:
+    container_name: sasstServerApi
+    restart: always
+    depends_on:
+      - mongo
+    build: ./server
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+
 
   web:
     container_name: sasstServerWeb
